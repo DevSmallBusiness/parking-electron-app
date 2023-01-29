@@ -1,44 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Parking</title>
-	</head>
-	<body>
-		<header>
-			<nav class="navbar__container">
-				<ul class="navbar__list">
-					<li class="navbar__item navbar__item--main">
-						<a class="navbar__link">
-							<span class="navbar__icon"><i></i></span>
-						</a>
-					</li>
-
-					<li class="navbar__item">
-						<a class="navbar__link">
-							<span class="navbar__icon"><i class="fas fa-home"></i></span>
-							<span class="navbar__text">Inicio</span>
-						</a>
-					</li>
-
-					<li class="navbar__item">
-						<a class="navbar__link">
-							<span class="navbar__icon"><i class="fa fa-pencil-square-o"></i></span>
-							<span class="navbar__text">Registrar</span>
-						</a>
-					</li>
-
-					<li class="navbar__item">
-						<a class="navbar__link">
-							<span class="navbar__icon"><i class="fas fa-hourglass"></i></span>
-							<span class="navbar__text">Historial</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Parking App</title>
+    <base href="./" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(359deg);
+          transform: rotate(359deg);
+        }
+      }
+      @-webkit-keyframes burst {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+        90% {
+          -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes flashing {
+        0% {
+          opacity: 1;
+        }
+        45% {
+          opacity: 0;
+        }
+        90% {
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes fade-left {
+        0% {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          opacity: 1;
+        }
+        75% {
+          -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes fade-right {
+        0% {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          opacity: 1;
+        }
+        75% {
+          -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes fade-up {
+        0% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 1;
+        }
+        75% {
+          -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes fade-down {
+        0% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 1;
+        }
+        75% {
+          -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes tada {
+        from {
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+        }
+        10%,
+        20% {
+          -webkit-transform: scale3d(0.95, 0.95, 0.95) rotate3d(0, 0, 1, -10deg);
+          transform: scale3d(0.95, 0.95, 0.95) rotate3d(0, 0, 1, -10deg);
+        }
+        30%,
+        50%,
+        70%,
+        90% {
+          -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+          transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+        }
+        40%,
+        60%,
+        80% {
+          -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -10deg);
+          transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -10deg);
+        }
+        to {
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+        }
+      }
+    </style>
+    <link href="./assets/boxicons/styles/index.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="./assets/boxicons/styles/index.min.css" /></noscript>
+    <style>
+      @import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap";
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #0d1117;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.7cd340dcfa881e84.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="styles.7cd340dcfa881e84.css" /></noscript>
+  </head>
+  <body>
+    <parking-root></parking-root>
+    <script src="runtime.26897f6bee70ee3b.js" type="module"></script>
+    <script src="polyfills.d2c20452f1548712.js" type="module"></script>
+    <script src="main.e44f232e2002b614.js" type="module"></script>
+  </body>
 </html>
